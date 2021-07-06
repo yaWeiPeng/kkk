@@ -1,0 +1,116 @@
+{include file="public/_header" type="edit" /}
+<form class="layui-form">
+	{caption:field caption="permissions" id='$data.id' /}
+	<div class="layui-form-item">
+		<label for="visitId" class="layui-form-label">
+			<span class="x-red">*</span>权限列表
+		</label>
+		<div class="layui-input-inline">
+			<div class="layui-input-inline"><span class="x-red">一级</span></div>
+			{foreach $column as $v}
+			<div class="layui-input-inline">
+				<input type="checkbox" lay-filter="quanxian" name="quanxian" pid="0" value="{$v['id']}" title="{$v['column_name']}" {if(in_array($v['id'],$data['quanxian']))}checked{/if}>
+			</div>
+			{foreach $v['son'] as $val}
+			<div class="layui-input-inline"><span style="color:blue">二级</span></div>
+			<div class="layui-input-inline">
+				<input type="checkbox" lay-filter="quanxian" name="quanxian" pid="{$v['id']}" value="{$val['id']}" title="{$val['column_name']}" {if(in_array($val['id'],$data['quanxian']))}checked{/if}>
+			</div>
+			<div class="layui-input-inline"><span style="color:yellow">三级</span></div>
+			<div class="layui-input-inline">
+				{foreach $val['son'] as $value}
+				<input type="checkbox" lay-filter="quanxian" name="quanxian" pid="{$val['id']}" value="{$value['id']}" title="{$value['column_name']}" {if(in_array($value['id'],$data['quanxian']))}checked{/if}>
+				{/foreach}
+			</div>
+			{/foreach}
+			{/foreach}
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="L_repass" class="layui-form-label"></label>
+		{if(isset($data))}
+		<input type="hidden" name="id" value="{$data['id']}" />
+		<button  class="layui-btn" lay-filter="edit" lay-submit="" id="wait">修改</button>
+		{else}
+		<button  class="layui-btn" lay-filter="add" lay-submit="" id="wait">添加</button>
+		{/if}
+	</div>
+</form>
+<script>
+layui.use(['form', 'layer'],function() {
+	var $ = layui.jquery,
+		form = layui.form,
+		layer = layui.layer;
+	//监听提交
+	form.on('submit(add)',function(data) {
+		$('#wait').addClass("layui-btn-disabled");
+		$('#wait').html("正在提交");
+		var visit = [];
+		$("input:checkbox[name='quanxian']:checked").each(function(i){
+			visit[i] = $(this).val();
+		});
+		data.field.quanxian = visit;
+		editajax('post','/permissions/doedit',data.field);
+		return false;
+	});
+	form.on('submit(edit)',function(data) {
+		$('#wait').addClass("layui-btn-disabled");
+		$('#wait').html("正在提交");
+		var visit = [];
+		$("input:checkbox[name='quanxian']:checked").each(function(i){
+			visit[i] = $(this).val();
+		});
+		data.field.quanxian = visit;
+		editajax('post','/permissions/doedit',data.field);
+		return false;
+	});
+	form.on('checkbox(quanxian)', function(data){
+		var pid = data.value;
+		var value = $(this).attr('pid');
+		var check = $(this).prop('checked');
+		//console.log(pid);
+		//console.log(value);
+		$('input[name="quanxian"]').each(function() {
+			if($(this).attr('pid') == pid){
+				if(check){
+					$(this).prop('checked',true);
+				}else{
+					$(this).prop('checked',false);
+				}
+				var secondpid = $(this).attr('value');
+				var check2 = $(this).prop('checked');
+				$('input[name="quanxian"]').each(function() {
+					if($(this).attr('pid') == secondpid){
+						if(check2){
+							$(this).prop('checked',true);
+						}else{
+							$(this).prop('checked',false);
+						}
+					}
+				});
+			}
+			if($(this).attr('value') == value){
+				$(this).prop('checked',true);
+			}
+			//if($(this).prop('checked')){
+				//var c = $(this).attr('pid');
+				//console.log('选择的'+c);
+				//$('input[name="quanxian"]').each(function() {
+					//if($(this).prop('checked')){
+					//console.log($(this).attr('pid'));
+						//if($(this).attr('pid') != c){
+							//$('input[name="quanxian"]').each(function() {
+								//$(this).prop('checked',false);
+							//});
+							//$('input[name="quanxian"]').attr('value')
+							//$(this).prop('checked',true);
+						//}
+					//}
+				//});
+			//}
+		}); 
+		form.render('checkbox');
+	}); 
+});
+</script>
+{include file="public/_footer" type="edit" /}

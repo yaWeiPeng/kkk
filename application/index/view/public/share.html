@@ -1,0 +1,49 @@
+
+<style>
+body{
+	top:0px!important; 
+    min-height: 0px!important;
+}
+.goog-te-banner-frame{
+	display:none
+}
+</style>
+
+	<style type="text/css">
+		.fxbut{position: fixed;right: 50px;top: 120px;cursor: pointer;}
+		.ewm{width: 200px;height: auto;position:fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);padding: 5px;background: #fff;display: none;}
+		.ewm img{width: 100%;}
+		.ewm a{width: 100px;height: 34px;border: 0;background: #ccc;margin: 15px auto;display: block;cursor: pointer;text-align: center;line-height: 34px;}
+	</style>
+		
+		
+		<div class="fxbut"><i class="layui-icon layui-icon-share"></i>分享</div>
+		<div class="ewm"><img src="" class="eimg"><a href="" class="addrss" download="二维码">下载</a></div>
+		
+	<script>
+		
+		var fxbut=$(".fxbut");
+		fxbut.click(function(){
+			$.ajax({
+			url:"/qrcode",
+			async:true,
+			dataType:'JSON',
+			success:function(result){
+				var data = JSON.parse(result);
+				console.log(data.data)
+				$(".eimg").attr("src",data.data);
+				$(".addrss").attr("href",data.data);
+			}
+			});
+			$(".ewm").css("display","block")
+		})
+		
+$(document).mouseup(function(e) {
+		var _con = $('.ewm'); // 设置目标区域
+		if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+			$(".ewm").css("display","none")
+		}
+	});
+	
+	</script>
+

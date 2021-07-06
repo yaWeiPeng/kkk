@@ -1,0 +1,62 @@
+{if('[type]'=='list')}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+function delajax(type,url,id){
+	$.ajax({
+		type:type,
+		url:url,
+		data:{id:id},
+		success:function(data){
+			var data = JSON.parse(data);
+			if(data.code == 1){
+				layer.msg(data.msg,{icon:1,time:1000});
+				setTimeout(function () {
+					location.reload();
+				},1000);
+			}else{
+				layer.msg(data.msg, {icon: 2});
+			}
+		}
+	});
+}
+</script>
+{/if}
+
+{if('[type]'=='edit')}
+	</div>
+</div>
+
+<script>
+function editajax(type,url,field){
+	$('#wait').addClass("layui-btn-disabled");
+	$.ajax({
+		type:type,
+		url:url,
+		data:{data:field},
+		success:function(data){
+			var data = JSON.parse(data);
+			if(data.code == 1){
+				layer.msg(data.msg, {icon: 1});
+				var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+				setTimeout(function () {
+				  parent.layer.close(index);
+				  parent.location.reload();
+				},1000);
+			}else{
+				layer.msg(data.msg, {icon: 2});
+				$('#wait').removeClass("layui-btn-disabled");
+			}
+		}
+	});
+}
+</script>
+{/if}
+
+
+</body>
+
+</html>

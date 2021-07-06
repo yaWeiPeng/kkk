@@ -1,0 +1,71 @@
+{include file="public/_header" /}
+        <div class="x-nav">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a>
+              <cite>快递鸟配置</cite></a>
+          </span>
+          <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+            <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i></a>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-show-xs-block">
+								EBusinessID （会员id）: 
+                                    <input class="layui-input"  autocomplete="off" placeholder="会员id" name="EBusinessID" id="" value="{if(!empty($config))}{$config->EBusinessID}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								Appkey （秘钥）: 
+                                    <input class="layui-input"  autocomplete="off" placeholder="密钥" name="Appkey" id="" value="{if(!empty($config))}{$config->Appkey}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								ReqURL （请求地址）: 
+                                    <input type="text" name="ReqURL"  placeholder="接口地址" autocomplete="off" class="layui-input" value="{if(!empty($config))}{$config->ReqURL}{/if}">
+                                </div>
+                                <input type="hidden" name="method" value="post">
+                                <input type="hidden" name="url" value="/kuaidi-config">
+                                <div class="layui-show-xs-block">
+                                    <button class="layui-btn"  lay-submit="" lay-filter="add">保存</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script>
+	layui.use(['form', 'layer'],
+            function() {
+                $ = layui.jquery;
+                var form = layui.form,
+                layer = layui.layer;
+                //监听提交
+                form.on('submit(add)',function(data) {
+                    //发异步，把数据提交给php
+					$.ajax({
+						type:"post",
+						url:'/kuaidi-config',
+						data:{data:data.field},
+						success:function(data){
+						  var data = JSON.parse(data);
+						  if(data.code == 1){
+							layer.msg(data.msg, {icon: 1});
+							setTimeout(function () {
+							  location.reload();
+							},2000);
+						  }else{
+							layer.msg(data.msg, {icon: 2});
+						  }
+						}
+					});
+                    return false;
+                });
+
+            });
+	</script>
+{include file="public/_footer" /}

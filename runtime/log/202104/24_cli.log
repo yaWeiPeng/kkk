@@ -1,0 +1,40 @@
+[2021-04-24T00:00:01+08:00][ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+info
+[2021-04-24T00:00:01+08:00][ info ] [ DB ] INIT mysql
+info
+[2021-04-24T00:00:01+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.000488s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+sql
+[2021-04-24T00:00:01+08:00][ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000763s ]
+sql
+[2021-04-24T00:00:01+08:00][ sql ] [ SQL ] SELECT `id`,`target_url`,`last_url`,`novel_state` FROM `k_novel` WHERE (  `novel_state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000240s ]
+sql
+[2021-04-24T00:02:11+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-24T00:02:11+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error
+[2021-04-24T00:04:20+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:59]
+error
+[2021-04-24T00:04:20+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:61]
+error
+[2021-04-24T00:04:20+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:61]
+error
+[2021-04-24T00:04:20+08:00][ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000711s ]
+sql
+[2021-04-24T00:04:20+08:00][ sql ] [ SQL ] INSERT INTO `k_novel_content` (`novel_id` , `title` , `content` , `create_time` , `update_time`) VALUES (137 , NULL , NULL , 1619193860 , 1619193860) [ RunTime:0.000805s ]
+sql
+[2021-04-24T00:04:20+08:00][ sql ] [ SQL ] UPDATE `k_novel`  SET `last_url` = '/86_86900/1005510.html' , `update_time` = 1619193860  WHERE (  `id` = 137 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.004353s ]
+sql
+[2021-04-24T00:04:20+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:75]
+error
+[2021-04-24T00:06:27+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-24T00:06:27+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error
+[2021-04-24T00:08:35+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-24T00:08:35+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error
+[2021-04-24T00:10:42+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-24T00:10:42+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error

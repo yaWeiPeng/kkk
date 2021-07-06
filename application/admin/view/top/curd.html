@@ -1,0 +1,41 @@
+<!-- 添加删除按钮 -->
+<div class="layui-card-header">
+	{if('[delurl]')}
+	<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+	{/if}
+	{if('[addurl]')}
+	<button class="layui-btn" onclick="xadmin.open('添加','[addurl]')"><i class="layui-icon"></i>添加</button>
+	{/if}
+</div>
+
+<script>
+layui.use(['form'], function(){
+	var form = layui.form;
+
+	// 监听全选
+	form.on('checkbox(checkall)', function(data){
+		if(data.elem.checked){
+			$('tbody input').prop('checked',true);
+		}else{
+			$('tbody input').prop('checked',false);
+		}
+		form.render('checkbox');
+	});
+});
+/*删除选中*/
+function delAll (argument) {
+	var ids = [];
+
+	// 获取选中的id 
+	$('tbody input').each(function(index, el) {
+		if($(this).prop('checked')){
+		   ids.push($(this).val())
+		}
+	});
+
+	layer.confirm('确认要删除吗？'+ids.toString(),function(index){
+		//捉到所有被选中的，发异步进行删除
+		delajax('post','[delurl]',ids);
+	});
+}
+</script>

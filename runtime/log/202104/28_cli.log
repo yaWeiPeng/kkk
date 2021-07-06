@@ -1,0 +1,36 @@
+[2021-04-28T00:00:01+08:00][ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+info
+[2021-04-28T00:00:01+08:00][ info ] [ DB ] INIT mysql
+info
+[2021-04-28T00:00:01+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.000414s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+sql
+[2021-04-28T00:00:01+08:00][ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000770s ]
+sql
+[2021-04-28T00:00:01+08:00][ sql ] [ SQL ] SELECT `id`,`target_url`,`last_url`,`novel_state` FROM `k_novel` WHERE (  `novel_state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000239s ]
+sql
+[2021-04-28T00:02:08+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-28T00:02:08+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error
+[2021-04-28T00:02:12+08:00][ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000762s ]
+sql
+[2021-04-28T00:02:12+08:00][ sql ] [ SQL ] INSERT INTO `k_novel_content` (`novel_id` , `title` , `content` , `create_time` , `update_time`) VALUES (137 , '第2052章 猎人与猎物！' , '第2052章&nbsp;猎人与猎物！<br /><br />“滋啦，滋啦，滋啦！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;天穹之上，天道神雷阵阵轰动，击穿整个山体，直达九地之下。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;瞬间，大殿阵中的一座座山峰，全部出现了不稳定的裂开形象，这让乔巴伦感受到了威胁。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;这山体中储存了大量的邪能，经过数以万次的试验，这里的空间一旦受到极端外力的干扰，会瞬间进入极度紊乱状态，甚至当场塌陷！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“乔巴伦，你在等什么，马上制服这个混蛋！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;高峰之上，菲斯大声喊道。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“嗯？你闭嘴！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;听到菲斯之言，乔巴伦认为这是对他的羞辱，顿时大怒。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“哼，此人关系到冥神之力，我不想说太多，马上制服他！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“乔巴伦，菲斯说的对，你没有多少时间了。”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;菲斯和巴伦克两名头目纷纷给乔巴伦施压，这让后者非常不爽，同为三大头目，他感受到自己似乎被另外两人孤立了。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;但是如果叶辰真的和冥神有关，拿下他，也是极大的功劳，到时候，他乔巴伦自然会挺直腰板！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;他转身看向叶辰道：“哈哈哈，真是没想到啊，一个人族修士，居然和冥神扯上关系，你真的让我刮目相看了，不过，这样只会让你死的更惨，冥神，是我们邪灵一族必要铲除的对象！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“卑微蝼蚁，也敢与神比肩，乔巴伦，好好珍惜你所剩不多的分分秒秒吧！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;突然，叶辰的嘴角露出一丝诡异笑容，如同死神的微笑，让乔巴伦内心一颤，但是很快他就镇定过来，他乃是真仙修士，乃是无数强者都要仰望的存在，这样的修为，在人间界就是神一般的存在，所以，眼前之人就要对自己跪伏朝拜才对，还敢如此嘲讽，这是不可思议，同样是不可饶恕的事情。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“在我邪灵之地，也敢说神？叶辰，死来！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;乔巴伦怒从心头起，恶向胆边生！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;整个人的怒气，来到了巅峰，顿时，邪树之力再次暴起，想要吞噬叶辰，但是他忘记了，之前他是如何失败的！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“来的好！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;叶辰心中冷笑，他早就等待整个机会，等待乔巴伦邪树彻底爆发的时刻。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“黑暗之源——万物吞灭！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“滋滋滋！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;在叶辰的背后，黑暗之源的力量再次升起，无数的黑暗物质，彻底蔓延整个空间，无数的山壁，地面，甚至岩缝中都是黑暗物质的流淌。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“吼！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;紧接着，黑暗物质化为巨大的黑暗之口，盖天灭地！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“嗤，嗤，嗤！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;黑暗物质的流动越来越快速，体质越来越大，已然渐渐地超越乔巴伦的掌控。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“这，这！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;乔巴伦的脑中再次出现了被支配的恐惧，同时，这种情况也让高峰之上的菲斯和巴伦克坐不住了。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;两大头目互相看了一眼，他们心中明白，如果再不限制叶辰释放的黑暗物质的流动，整个地下试验大殿都要陷入黑那之源的吞噬网络之内，到时候，不仅是恰巴伦，甚至整个邪灵总部都要受到牵连，因为叶辰的黑那物质具有无限吞噬性，如同从来不会饱的洪荒猛兽！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“出手！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;两人飞身而出，直冲叶辰。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“哈，三人齐上吧！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;面对三大头目，叶辰冷笑一声，天帝之威，赫然不惧。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;此等局面，让无数的邪灵强者感觉到了惊恐，愤怒，不解，等等各种情绪。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;他们从来没见过这样的场景，黑暗物质，如同是不断复制的噬菌体，而他们这些邪灵，还有各种装置，各种空间，都成为了噬菌体想要吞噬的那些“细菌”。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;他们都是高高在上的强者，何曾想到，有一天会成为了“细菌”这样渺小的生命。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“三大头目齐出，就不信制服不了这个家伙！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“对，三大头目都是真仙之境的超级强者，他们的实力远不是这小子可以对付！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“我们邪灵是最强的！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;在叶辰黑暗物质的强大压制之下，那些邪灵已然失去理智，只想着使用精神胜利法来弥补自己精神之上被压制的创伤，这样已然显示出弱小生命的特征，这就是冥神之力的强悍压制力，让那些所谓强者都要俯首！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“嗤，嗤，嗤！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;黑暗物质无限延伸，碰撞的速度极快，眨眼之间，整个地下试验大殿全部沦陷。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“你们来做什么？”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;看到菲斯和巴伦克出手，乔巴伦显然很不满意，他乃是真仙级别的修士，对上一个大乘境之人都要其他两大头目联手帮助，他这司令还有当下去的必要吗？<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“不要废话，此人的实力远在修为境界之上，没看到他想要吞噬整个邪灵之地吗？”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“乔巴伦，现在不是争执的时候，我等出手，也是为了保险起见，此人释放的黑暗物质，正是传闻中的黑暗之源，听闻乃是冥神留下的一团黑暗能量，产生灵智，没想到居然被叶辰所得！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“哼，我可以对付！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“是吗，你如果真的可以对付，就不需要我们出手了。”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;菲斯和巴伦克都对着乔巴伦投来鄙夷的目光，让后者的愤怒更是不可遏制，他不管那么多了，他亲手干掉对手，唯有如此，才能够洗刷他的耻辱。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“邪树融合！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;禁忌之术，乔巴伦居然自身融合邪树，要和叶辰掌控的黑暗物质做终极决战。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“轰隆隆！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;乔巴伦的身体彻底融合进入邪树之内，他的巨大脸庞出现在了邪树的中心树干之上。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“哈哈哈！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;粗重的笑声，不断地回荡整个空间之内，看到如此形态的乔巴伦，就算是那些邪灵强者都露出惊颤之色，他们从来没想到，乔巴伦居然还有如此禁术。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“叶辰，现在让邪树王终结你的性命！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“猎物，猎人，你真的看清楚了吗？”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“我不需要看清楚，吃掉你，我就是胜利者！“<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“你终究还是看不清楚啊！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;就在乔巴伦准备张开树口，想要吞噬叶辰的时候，突然，他看到地面之上出现了宏大无比的闇影，如同是整个天地都塌陷下来。<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“不好，乔巴伦，闪开！”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;“什么？”<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;乔巴伦看到了菲斯和巴伦克的夸张表情，他不知道发生了什么，但是可以吞噬一座高峰的巨口从天而降，猛然见，乔巴伦陷入无边黑暗！<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />(本章完)<br /><br />' , 1619539332 , 1619539332) [ RunTime:0.003856s ]
+sql
+[2021-04-28T00:02:12+08:00][ sql ] [ SQL ] UPDATE `k_novel`  SET `last_url` = '/86_86900/1005511.html' , `update_time` = 1619539332  WHERE (  `id` = 137 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.004241s ]
+sql
+[2021-04-28T00:04:19+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:59]
+error
+[2021-04-28T00:04:19+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:61]
+error
+[2021-04-28T00:04:19+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:61]
+error
+[2021-04-28T00:04:19+08:00][ sql ] [ SQL ] INSERT INTO `k_novel_content` (`novel_id` , `title` , `content` , `create_time` , `update_time`) VALUES (137 , NULL , NULL , 1619539459 , 1619539459) [ RunTime:0.000440s ]
+sql
+[2021-04-28T00:04:19+08:00][ sql ] [ SQL ] UPDATE `k_novel`  SET `last_url` = '/86_86900/1005656.html' , `update_time` = 1619539459  WHERE (  `id` = 137 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.003843s ]
+sql
+[2021-04-28T00:04:19+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:75]
+error
+[2021-04-28T00:06:29+08:00][ error ] [8]Undefined offset: 0[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:27]
+error
+[2021-04-28T00:06:29+08:00][ error ] [8]Undefined offset: 2[/www/wwwroot/www.lilymin.com/application/common/task/NovelUpdate.php:29]
+error

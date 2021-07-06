@@ -1,0 +1,96 @@
+<!-- 搜索项 -->
+<div class="layui-card-body ">
+	<form class="layui-form layui-col-space5" action="[url]" method="get">
+	{caption:search caption="[model]" /}
+		{if($k=='date')}
+		<div class="layui-inline layui-show-xs-block">
+			<input class="layui-input"  autocomplete="off" placeholder="开始日" name="search[time][start]" id="start" {if(isset($search['time']['start']))}value="{$search['time']['start']}"{/if}>
+		</div>
+		<div class="layui-inline layui-show-xs-block">
+			<input class="layui-input"  autocomplete="off" placeholder="截止日" name="search[time][end]" id="end" {if(isset($search['time']['end']))}value="{$search['time']['end']}"{/if}>
+		</div>
+		{else if($k=='form')}
+		{foreach $v as $key=>$val}
+		{if($val['type']['type'] == 'varchar')}
+		<div class="layui-inline layui-show-xs-block">
+			<input type="text" name="search[likes][{$val['field']}]" placeholder="输入%{$val['beizhu']}%" autocomplete="off" class="layui-input" {if(isset($search['likes'][$val['field']]))}value="{$search['likes'][$val['field']]}"{/if}>
+		</div>
+		{/if}
+		{if($val['type']['type'] == 'radio')}
+		<?php 
+			$arr = explode(',',$val['type_val']);
+			foreach($arr as $kk=>$vv){
+				$arr[$kk] = explode(':',$vv);
+			}
+		?>
+		<div class="layui-inline layui-show-xs-block">
+			<select name="search[selects][{$val['field']}]">
+				<option value="">{$val['beizhu']}</option>
+			{foreach $arr as $vv}
+			<option value="{$vv[0]}" {if(isset($search['selects'][$val['field']]) && $vv[0] == $search['selects'][$val['field']])}selected{/if}>{$vv[1]}</option>
+			{/foreach}
+			</select>
+		</div>
+		{/if}
+		{/foreach}
+		{/if}
+		{/caption:search}
+		<div class="layui-inline layui-show-xs-block">
+			<button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+		</div>
+	</form>
+	<div class="layui-inline layui-show-xs-block">
+		<button class="layui-btn-danger layui-btn layui-btn-xs"  onclick="window.location.href='[url]'" href="javascript:;" >清空选择</button>
+	</div>
+</div>
+<!-- <div class="layui-card-body ">
+	<form class="layui-form layui-col-space5" action="[url]" method="get">
+		{if('[date]'==1)}
+		<div class="layui-inline layui-show-xs-block">
+			<input class="layui-input"  autocomplete="off" placeholder="开始日" name="search[time][start]" id="start" {if(isset($search['time']['start']))}value="{$search['time']['start']}"{/if}>
+		</div>
+		<div class="layui-inline layui-show-xs-block">
+			<input class="layui-input"  autocomplete="off" placeholder="截止日" name="search[time][end]" id="end" {if(isset($search['time']['end']))}value="{$search['time']['end']}"{/if}>
+		</div>
+		{/if}
+		{if([like] != '')}
+		{foreach [like] as $k=>$v}
+		<div class="layui-inline layui-show-xs-block">
+			<input type="text" name="search[likes][{$v}]" placeholder="输入%{$k}%" autocomplete="off" class="layui-input" {if(isset($search['likes'][$v]))}value="{$search['likes'][$v]}"{/if}>
+		</div>
+		{/foreach}
+		{/if}
+		{if(!isset([select][0]))}
+		{foreach [select] as $k=>$v}
+		<div class="layui-inline layui-show-xs-block">
+			<select name="search[selects][{$k}]">
+				<option value="" {if(isset($search['selects'][$k]))}selected{/if}></option>
+				{foreach $v as $key=>$val}
+				<option value="{$key}"  {if(isset($search['selects'][$k]) && $search['selects'][$k] == $key)}selected{/if}>{$val}</option>
+				{/foreach}
+			</select>
+		</div>
+		{/foreach}
+		{/if}
+		<div class="layui-inline layui-show-xs-block">
+			<button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+		</div>
+	</form>
+</div> -->
+<script>
+layui.use(['laydate'], function(){
+	var laydate = layui.laydate;
+
+	//日历
+	laydate.render({
+		elem: '#start' //指定id
+	});
+
+	//日历
+	laydate.render({
+		elem: '#end' //指定id
+	});
+
+
+});
+</script>

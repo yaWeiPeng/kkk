@@ -1,0 +1,17 @@
+{include file="public/_header" type="list" /}
+<div class="layui-card-body">
+	<div class="layui-row">
+		{foreach $data as $v}
+		<div class="layui-form-item">
+			<label for="title" class="layui-form-label">
+				<span class="x-red">*</span>网站
+			</label>
+			<a href="{$v['url']}" target="_blank">{$v['url']}</a>
+			<div class="layui-card-header">
+				<button class="layui-btn" onclick="xadmin.open('拉取小说','/get-novel-edit/{$v['id']}')"><i class="layui-icon"></i>拉取</button>
+			</div>
+		</div>
+		{/foreach}
+	</div>
+</div>
+{include file="public/_footer" type="list" /}

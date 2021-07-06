@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="/static/admin/css/font.css">
+		<link rel="stylesheet" href="/static/admin/css/xadmin.css">
+		<!-- <link rel="stylesheet" href="./css/theme5.css"> -->
+		<script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/static/admin/js/xadmin.js"></script>
+		<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+        {include file="public/style" /}
+    </head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form">
+                  <div class="layui-form-item">
+                      <label for="LogisticCode" class="layui-form-label">
+                          <span class="x-red">*</span>物流单号
+                      </label>
+					  <div class="layui-form-mid layui-word-aux">
+                          <span class="x-red">{if(!empty($data['LogisticCode']))}{$data['LogisticCode']}{/if}</span>
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="ShipperCode" class="layui-form-label">
+                          <span class="x-red">*</span>标识
+                      </label>
+					  <div class="layui-form-mid layui-word-aux">
+                          <span class="x-red">{if(!empty($data['ShipperCode']))}{$data['ShipperCode']}{/if}</span>
+                      </div>
+                  </div>
+				  <div class="layui-form-item">
+                      <label for="State" class="layui-form-label">
+                          <span class="x-red">*</span>状态
+                      </label>
+					  <div class="layui-form-mid layui-word-aux">
+                          <span class="x-red">{if(!empty($data['State']))}{$data['State']}{/if}</span>
+                      </div>
+                  </div>
+				  <div class="layui-form-item">
+                      <label for="Traces" class="layui-form-label">
+                          <span class="x-red">*</span>物流轨迹
+                      </label>
+					  {if(!empty($data['Traces']))}
+					  {foreach($data['Traces'] as $v)}
+					  <div class="layui-word-aux" style="display: block;line-height: 20px;margin-right: 10px;padding: 9px 0px !important;">
+                          <span class="x-red">时间:{$v['AcceptTime']}</span>
+                          <span class="x-red">事件:{$v['AcceptStation']}</span>
+                      </div>
+					  {/foreach}
+					  {else}
+					  <div class="layui-form-mid layui-word-aux">
+                          <span class="x-red">{if(!empty($data['Reason']))}{$data['Reason']}{/if}</span>
+                      </div>
+					  {/if}
+                  </div>
+              </form>
+            </div>
+        </div>
+    </body>
+
+</html>

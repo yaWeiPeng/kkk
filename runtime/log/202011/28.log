@@ -1,0 +1,3161 @@
+---------------------------------------------------------------
+
+[2020-11-28T00:08:59+08:00] 124.65.156.126 GET www.lilymin.com/
+[运行时间：0.032012s] [吞吐率：31.24req/s] [内存消耗：3,245.43kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'okhttp/3.10.0',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000374s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000194s ]
+---------------------------------------------------------------
+
+[2020-11-28T00:10:16+08:00] 220.181.108.185 GET lilymin.com/chapter_content/298/137
+[运行时间：0.136868s] [吞吐率：7.31req/s] [内存消耗：46,489.55kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '298',
+    'nid' => '137',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn,zh-tw',
+  'user-agent' => 'Mozilla/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '298',
+  'nid' => '137',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 137 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.083951s ]
+---------------------------------------------------------------
+
+[2020-11-28T00:10:45+08:00] 203.208.60.60 GET lilymin.com/permissions-edit/5
+[运行时间：0.031168s] [吞吐率：32.08req/s] [内存消耗：3,138.47kb] [文件加载：78]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'permissions-edit/<id>',
+  'route' => 'admin/Permissions/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+    'id' => '5',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Fri, 13 Nov 2020 09:06:34 GMT',
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000341s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_visit` [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT `controller`,`action` FROM `k_visit` WHERE (  `id` = 0 ) AND `k_visit`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000310s ]
+---------------------------------------------------------------
+
+[2020-11-28T00:11:15+08:00] 203.208.60.10 GET shop.lilymin.com/ures/cargo/2020/9v-a0th/2020-9v-aak8.gif
+[运行时间：0.014410s] [吞吐率：69.40req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T00:26:18+08:00] 203.208.60.111 GET lilymin.com/chapter_content/352/137
+[运行时间：0.146625s] [吞吐率：6.82req/s] [内存消耗：46,490.42kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '352',
+    'nid' => '137',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '352',
+  'nid' => '137',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000351s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 137 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.089434s ]
+---------------------------------------------------------------
+
+[2020-11-28T00:28:24+08:00] 203.208.60.20 GET shop.lilymin.com/ures/cargo/2020/9y-h3pn/2020-9y-h4x8.jpg
+[运行时间：0.014581s] [吞吐率：68.58req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T00:45:34+08:00] 203.208.60.51 GET shop.lilymin.com/ures/cargo/2020/9y-h3pn/2020-9y-h51k.jpg
+[运行时间：0.015125s] [吞吐率：66.12req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T00:53:41+08:00] 185.191.171.19 GET lilymin.com/chapter_content/3125/145
+[运行时间：0.033311s] [吞吐率：30.02req/s] [内存消耗：5,205.29kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3125',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml, application/xhtml+xml',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3125',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000383s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000946s ]
+---------------------------------------------------------------
+
+[2020-11-28T01:02:41+08:00] 203.208.60.66 GET shop.lilymin.com/ures/cargo/2020/9y-f1ph/2020-9y-f2tq.jpg
+[运行时间：0.015654s] [吞吐率：63.88req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T01:04:39+08:00] 113.31.115.156 GET lilymin.com/
+[运行时间：0.065076s] [吞吐率：15.37req/s] [内存消耗：3,245.81kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11) AppleWebKit/601.1.27 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/601.1.27',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002136s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.001014s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000439s ]
+---------------------------------------------------------------
+
+[2020-11-28T01:04:39+08:00] 113.31.115.156 GET lilymin.com/
+[运行时间：0.062555s] [吞吐率：15.99req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Dalvik/2.1.0 (Linux; U; Android 6.0; ZTE BA520 Build/MRA58K)',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001276s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.002760s ]
+---------------------------------------------------------------
+
+[2020-11-28T01:19:49+08:00] 203.208.60.117 GET shop.lilymin.com/ures/cargo/2020/9x-ndye/2020-9x-nf90.jpg
+[运行时间：0.015150s] [吞吐率：66.01req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T01:25:34+08:00] 203.208.60.18 GET yelin.work/chapter_content/1520/136
+[运行时间：0.090780s] [吞吐率：11.02req/s] [内存消耗：20,885.20kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1520',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1520',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000339s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.047545s ]
+---------------------------------------------------------------
+
+[2020-11-28T01:34:37+08:00] 162.243.128.133 GET 47.106.93.189/actuator/health
+[运行时间：0.015182s] [吞吐率：65.87req/s] [内存消耗：1,435.66kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T01:36:58+08:00] 203.208.60.37 GET shop.lilymin.com/ures/cargo/2020/a5-an97/2020-a5-b1c0.gif
+[运行时间：0.014449s] [吞吐率：69.21req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T01:38:04+08:00] 203.208.60.48 GET lilymin.com/chapter_content/1729/136
+[运行时间：0.090994s] [吞吐率：10.99req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1729',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1729',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000344s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.048281s ]
+---------------------------------------------------------------
+
+[2020-11-28T01:46:56+08:00] 143.110.182.156 GET 47.106.93.189:443/
+[运行时间：0.033278s] [吞吐率：30.05req/s] [内存消耗：3,245.20kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => '47.106.93.189:443',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000374s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000207s ]
+---------------------------------------------------------------
+
+[2020-11-28T02:54:30+08:00] 203.208.60.73 GET lilymin.com/chapter_content/1760/136
+[运行时间：0.093679s] [吞吐率：10.67req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1760',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1760',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000328s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.051033s ]
+---------------------------------------------------------------
+
+[2020-11-28T03:05:15+08:00] 180.163.220.5 GET www.lilymin.com/
+[运行时间：0.032188s] [吞吐率：31.07req/s] [内存消耗：3,247.21kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://baidu.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 baidu.sogo.uc.UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000435s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000221s ]
+---------------------------------------------------------------
+
+[2020-11-28T03:05:17+08:00] 203.208.60.9 GET yelin.work/chapter_content/4964/145
+[运行时间：0.032663s] [吞吐率：30.62req/s] [内存消耗：5,205.45kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4964',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4964',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000340s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000944s ]
+---------------------------------------------------------------
+
+[2020-11-28T03:06:39+08:00] 220.181.51.114 GET www.lilymin.com/
+[运行时间：0.030947s] [吞吐率：32.31req/s] [内存消耗：3,245.80kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-cn,zh-tw',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36',
+  'host' => 'www.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000372s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000191s ]
+---------------------------------------------------------------
+
+[2020-11-28T03:11:31+08:00] 47.100.244.51 GET yelin.work/
+[运行时间：0.031977s] [吞吐率：31.27req/s] [内存消耗：3,245.66kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'yelin.work',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000381s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000199s ]
+---------------------------------------------------------------
+
+[2020-11-28T03:41:48+08:00] 203.208.60.11 GET shop.lilymin.com/ures/cargo/2020/9w-gda1/2020-9w-geau.jpg
+[运行时间：0.014424s] [吞吐率：69.33req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T03:47:58+08:00] 47.101.201.176 GET www.yelin.work/
+[运行时间：0.032197s] [吞吐率：31.06req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.yelin.work',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000372s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000189s ]
+---------------------------------------------------------------
+
+[2020-11-28T04:07:35+08:00] 47.101.199.29 GET 47.106.93.189/
+[运行时间：0.032171s] [吞吐率：31.08req/s] [内存消耗：3,245.70kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '47.106.93.189',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000216s ]
+---------------------------------------------------------------
+
+[2020-11-28T04:09:38+08:00] 203.208.60.25 GET lilymin.com/chapter_content/3307/146
+[运行时间：0.148646s] [吞吐率：6.73req/s] [内存消耗：43,424.54kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3307',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3307',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000371s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.092618s ]
+---------------------------------------------------------------
+
+[2020-11-28T04:25:08+08:00] 203.208.60.71 GET shop.lilymin.com/ures/cargo/2020/9x-beva/2020-9x-bg64.jpg
+[运行时间：0.015991s] [吞吐率：62.54req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T04:41:36+08:00] 47.101.194.208 GET shop.lilymin.com/
+[运行时间：0.031520s] [吞吐率：31.73req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'shop.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000325s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000225s ]
+---------------------------------------------------------------
+
+[2020-11-28T04:45:00+08:00] 203.208.60.10 GET yelin.work/chapter_content/1702/136
+[运行时间：0.089085s] [吞吐率：11.23req/s] [内存消耗：20,885.20kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1702',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1702',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000403s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.048143s ]
+---------------------------------------------------------------
+
+[2020-11-28T05:24:53+08:00] 167.248.133.39 GET 47.106.93.189:443/
+[运行时间：0.049871s] [吞吐率：20.05req/s] [内存消耗：3,245.04kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '47.106.93.189:443',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000486s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000300s ]
+---------------------------------------------------------------
+
+[2020-11-28T05:24:54+08:00] 167.248.133.39 GET 47.106.93.189/
+[运行时间：0.031451s] [吞吐率：31.80req/s] [内存消耗：3,245.66kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000204s ]
+---------------------------------------------------------------
+
+[2020-11-28T05:25:24+08:00] 203.208.60.119 GET lilymin.com/chapter_content/4900/145
+[运行时间：0.033955s] [吞吐率：29.45req/s] [内存消耗：5,206.12kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4900',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4900',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000395s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000928s ]
+---------------------------------------------------------------
+
+[2020-11-28T05:31:22+08:00] 47.98.97.252 GET bt.lilymin.com/
+[运行时间：0.033151s] [吞吐率：30.16req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'bt.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000196s ]
+---------------------------------------------------------------
+
+[2020-11-28T06:16:04+08:00] 120.85.111.113 GET www.lilymin.com/
+[运行时间：0.033849s] [吞吐率：29.54req/s] [内存消耗：3,245.81kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000351s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000191s ]
+---------------------------------------------------------------
+
+[2020-11-28T06:24:43+08:00] 203.208.60.14 GET yelin.work/chapter_content/3216/146
+[运行时间：0.145080s] [吞吐率：6.89req/s] [内存消耗：43,423.87kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3216',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3216',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000415s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.088845s ]
+---------------------------------------------------------------
+
+[2020-11-28T06:44:04+08:00] 203.208.60.44 GET lilymin.com/chapter_content/4888/145
+[运行时间：0.032161s] [吞吐率：31.09req/s] [内存消耗：5,206.12kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4888',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4888',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000383s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000983s ]
+---------------------------------------------------------------
+
+[2020-11-28T07:08:59+08:00] 203.208.60.114 GET www.lilymin.com/chapter/145
+[运行时间：0.033972s] [吞吐率：29.44req/s] [内存消耗：3,779.18kb] [文件加载：85]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter/<id>',
+  'route' => 'index/Index/chapter',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Fri, 27 Nov 2020 13:19:08 GMT',
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'www.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/chapter.html [ array (
+  0 => 'novel_info',
+  1 => 'novel',
+  2 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000333s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `id` = 145 ) AND `k_novel`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL [ RunTime:0.000169s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC LIMIT 0,20 [ RunTime:0.000389s ]
+---------------------------------------------------------------
+
+[2020-11-28T07:17:43+08:00] 45.15.143.171 GET 47.106.93.189:443/
+[运行时间：0.032121s] [吞吐率：31.13req/s] [内存消耗：3,245.48kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'libwww-perl/6.49',
+  'host' => '47.106.93.189:443',
+  'connection' => 'TE, close',
+  'te' => 'deflate,gzip;q=0.3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000366s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000209s ]
+---------------------------------------------------------------
+
+[2020-11-28T07:56:59+08:00] 203.208.60.23 GET lilymin.com/chapter_content/3218/146
+[运行时间：0.150400s] [吞吐率：6.65req/s] [内存消耗：43,424.54kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3218',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3218',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000325s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.095471s ]
+---------------------------------------------------------------
+
+[2020-11-28T08:04:26+08:00] 203.208.60.73 GET yelin.work/chapter_content/3328/146
+[运行时间：0.147579s] [吞吐率：6.78req/s] [内存消耗：43,423.87kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3328',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3328',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000330s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.092904s ]
+---------------------------------------------------------------
+
+[2020-11-28T08:18:38+08:00] 203.208.60.38 GET www.lilymin.com/chapter_content/804/137
+[运行时间：0.146629s] [吞吐率：6.82req/s] [内存消耗：46,490.45kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '804',
+    'nid' => '137',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'www.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '804',
+  'nid' => '137',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000375s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 137 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.088743s ]
+---------------------------------------------------------------
+
+[2020-11-28T08:24:28+08:00] 101.132.102.18 GET lilymin.com/
+[运行时间：0.030751s] [吞吐率：32.52req/s] [内存消耗：3,245.66kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000342s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000194s ]
+---------------------------------------------------------------
+
+[2020-11-28T08:50:03+08:00] 13.66.139.72 GET lilymin.com/
+[运行时间：0.032457s] [吞吐率：30.81req/s] [内存消耗：3,246.16kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+  'host' => 'lilymin.com',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'pragma' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000396s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000192s ]
+---------------------------------------------------------------
+
+[2020-11-28T09:13:52+08:00] 203.208.60.37 GET lilymin.com/chapter_content/5601/136
+[运行时间：0.087631s] [吞吐率：11.41req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '5601',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5601',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000391s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.046575s ]
+---------------------------------------------------------------
+
+[2020-11-28T09:40:50+08:00] 47.101.45.14 GET lilymin.com/
+[运行时间：0.034885s] [吞吐率：28.67req/s] [内存消耗：3,245.44kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (bingbot/2.0;)BingBot',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000247s ]
+---------------------------------------------------------------
+
+[2020-11-28T09:44:09+08:00] 203.208.60.120 GET yelin.work/chapter_content/1431/136
+[运行时间：0.083446s] [吞吐率：11.98req/s] [内存消耗：20,885.20kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1431',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yelin.work',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1431',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000374s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.045889s ]
+---------------------------------------------------------------
+
+[2020-11-28T10:28:33+08:00] 203.208.60.94 GET lilymin.com/chapter_content/3001/138
+[运行时间：0.116115s] [吞吐率：8.61req/s] [内存消耗：38,567.73kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3001',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3001',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000442s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.073081s ]
+---------------------------------------------------------------
+
+[2020-11-28T10:48:46+08:00] 47.101.190.233 GET www.lilymin.com/
+[运行时间：0.056369s] [吞吐率：17.74req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000390s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000213s ]
+---------------------------------------------------------------
+
+[2020-11-28T11:23:51+08:00] 203.208.60.102 GET 47.106.93.189/chapter_content/1894/138
+[运行时间：0.138730s] [吞吐率：7.21req/s] [内存消耗：38,567.09kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1894',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1894',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.088281s ]
+---------------------------------------------------------------
+
+[2020-11-28T11:44:20+08:00] 203.208.60.34 GET lilymin.com/chapter_content/1962/138
+[运行时间：0.131019s] [吞吐率：7.63req/s] [内存消耗：38,567.73kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1962',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1962',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000342s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.074719s ]
+---------------------------------------------------------------
+
+[2020-11-28T12:15:57+08:00] 113.85.83.142 GET www.yelin.work/
+[运行时间：0.033337s] [吞吐率：30.00req/s] [内存消耗：3,246.22kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.yelin.work',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000499s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000213s ]
+---------------------------------------------------------------
+
+[2020-11-28T12:49:55+08:00] 203.208.60.97 GET ebuycms.lilymin.com/uploads/allimg/20191213/1-191213164Q02K.png
+[运行时间：0.015476s] [吞吐率：64.62req/s] [内存消耗：1,435.70kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T13:02:37+08:00] 47.101.162.100 GET ebuycms.lilymin.com/
+[运行时间：0.032073s] [吞吐率：31.18req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'ebuycms.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000193s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:02:49+08:00] 203.208.60.27 GET lilymin.com/chapter_content/1393/136
+[运行时间：0.086508s] [吞吐率：11.56req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1393',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1393',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.048210s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:03:34+08:00] 203.208.60.0 GET 47.106.93.189/chapter_content/1926/138
+[运行时间：0.121916s] [吞吐率：8.20req/s] [内存消耗：38,567.09kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1926',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1926',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.072521s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:04:44+08:00] 184.105.247.194 GET 47.106.93.189/
+[运行时间：0.032249s] [吞吐率：31.01req/s] [内存消耗：3,245.00kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000377s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000205s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:20:52+08:00] 83.97.20.31 GET 47.106.93.189:443/
+[运行时间：0.035129s] [吞吐率：28.47req/s] [内存消耗：3,245.20kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'host' => '47.106.93.189:443',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000345s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000203s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:29:54+08:00] 47.103.5.27 GET lilymin.com/
+[运行时间：0.036311s] [吞吐率：27.54req/s] [内存消耗：3,245.66kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000464s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000292s ]
+---------------------------------------------------------------
+
+[2020-11-28T13:42:52+08:00] 209.17.97.106 GET ebuycms.lilymin.com/
+[运行时间：0.033146s] [吞吐率：30.17req/s] [内存消耗：3,245.36kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)',
+  'host' => 'ebuycms.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000353s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000219s ]
+---------------------------------------------------------------
+
+[2020-11-28T14:15:24+08:00] 47.103.21.203 GET www.lilymin.com/
+[运行时间：0.033147s] [吞吐率：30.17req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'www.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000344s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000194s ]
+---------------------------------------------------------------
+
+[2020-11-28T14:15:56+08:00] 203.208.60.89 GET lilymin.com/chapter_content/1857/138
+[运行时间：0.117784s] [吞吐率：8.49req/s] [内存消耗：38,567.73kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1857',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1857',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000359s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.072536s ]
+---------------------------------------------------------------
+
+[2020-11-28T14:39:46+08:00] 113.31.115.156 GET lilymin.com/
+[运行时间：0.032256s] [吞吐率：31.00req/s] [内存消耗：3,245.81kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11) AppleWebKit/601.1.27 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/601.1.27',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000308s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000680s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000197s ]
+---------------------------------------------------------------
+
+[2020-11-28T14:39:47+08:00] 113.31.115.156 GET lilymin.com/
+[运行时间：0.031889s] [吞吐率：31.36req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Dalvik/2.1.0 (Linux; U; Android 6.0; ZTE BA520 Build/MRA58K)',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000351s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000205s ]
+---------------------------------------------------------------
+
+[2020-11-28T14:43:17+08:00] 203.208.60.44 GET 47.106.93.189/chapter_content/2998/138
+[运行时间：0.140161s] [吞吐率：7.13req/s] [内存消耗：38,567.09kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '2998',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2998',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000332s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.078918s ]
+---------------------------------------------------------------
+
+[2020-11-28T15:32:56+08:00] 203.208.60.107 GET lilymin.com/chapter_content/3301/146
+[运行时间：0.149522s] [吞吐率：6.69req/s] [内存消耗：43,424.54kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3301',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3301',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000366s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.092811s ]
+---------------------------------------------------------------
+
+[2020-11-28T15:49:55+08:00] 203.208.60.86 GET shop.lilymin.com/ures/cargo/2020/9y-anje/2020-9y-aq5e.jpg
+[运行时间：0.014627s] [吞吐率：68.37req/s] [内存消耗：1,436.09kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T15:50:26+08:00] 219.136.205.26 GET www.lilymin.com/admin
+[运行时间：0.022542s] [吞吐率：44.36req/s] [内存消耗：1,903.96kb] [文件加载：67]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin',
+  'route' => 'admin/admin/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2020-11-28T15:50:26+08:00] 219.136.205.26 GET www.lilymin.com/login
+[运行时间：0.019159s] [吞吐率：52.20req/s] [内存消耗：1,812.72kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Base/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/admin/login.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-28T15:50:30+08:00] 219.136.205.26 POST www.lilymin.com/dologin
+[运行时间：0.038983s] [吞吐率：25.65req/s] [内存消耗：3,281.27kb] [文件加载：85]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'dologin',
+  'route' => 'admin/Base/dologin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://www.lilymin.com/login',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'https://www.lilymin.com',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '53',
+)
+[ info ] [ PARAM ] array (
+  'data' => 
+  array (
+    'username' => 'admin',
+    'password' => 'keweipeng',
+  ),
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_user` [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT * FROM `k_user` WHERE (  `username` = 'admin' ) AND `k_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `username`,`permissions_id` FROM `k_user` WHERE (  `id` = 8 ) AND `k_user`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_permissions` [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`level`,`visitId` FROM `k_permissions` WHERE (  `id` = 5 ) AND `k_permissions`.`delete_time` IS NULL [ RunTime:0.000242s ]
+---------------------------------------------------------------
+
+[2020-11-28T15:50:31+08:00] 219.136.205.26 GET www.lilymin.com/admin
+[运行时间：0.023452s] [吞吐率：42.64req/s] [内存消耗：2,069.43kb] [文件加载：68]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin',
+  'route' => 'admin/admin/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/index.html [ array (
+  0 => 'menus',
+  1 => 'userInfo',
+) ]
+---------------------------------------------------------------
+
+[2020-11-28T15:50:31+08:00] 219.136.205.26 GET www.lilymin.com/welcome
+[运行时间：0.035826s] [吞吐率：27.91req/s] [内存消耗：2,900.22kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'welcome',
+  'route' => 'admin/admin/welcome',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/welcome.html [ array (
+  0 => 'server',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003225s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] select VERSION() as sqlversion [ RunTime:0.000215s ]
+---------------------------------------------------------------
+
+[2020-11-28T15:50:40+08:00] 219.136.205.26 GET www.lilymin.com/novel
+[运行时间：0.049239s] [吞吐率：20.31req/s] [内存消耗：3,681.13kb] [文件加载：90]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'novel',
+  'route' => 'admin/Novel/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/novel/list.html [ array (
+  0 => 'title',
+  1 => 'get',
+  2 => 'cate',
+  3 => 'data',
+  4 => 'count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `title` LIKE '%%' ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `title` LIKE '%%' ) AND `k_novel`.`delete_time` IS NULL LIMIT 0,30 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_category` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 0 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 1 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 3 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 9 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 8 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 2 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 4 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 6 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel_category` WHERE (  `pid` = 7 ) AND `k_novel_category`.`delete_time` IS NULL [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT `name` FROM `k_novel_category` WHERE (  `id` = 9 ) AND `k_novel_category`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `name` FROM `k_novel_category` WHERE (  `id` = 9 ) AND `k_novel_category`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT `name` FROM `k_novel_category` WHERE (  `id` = 4 ) AND `k_novel_category`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT `name` FROM `k_novel_category` WHERE (  `id` = 2 ) AND `k_novel_category`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT `name` FROM `k_novel_category` WHERE (  `id` = 2 ) AND `k_novel_category`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000181s ]
+---------------------------------------------------------------
+
+[2020-11-28T15:51:33+08:00] 219.136.205.26 GET www.lilymin.com/caption/index
+[运行时间：0.038457s] [吞吐率：26.00req/s] [内存消耗：3,344.19kb] [文件加载：82]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'caption/<action>',
+  'route' => 'get<action>',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'prefix' => 'admin/caption/',
+  ),
+  'var' => 
+  array (
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'index',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/caption/model.html [ array (
+  0 => 'count',
+  1 => 'data',
+  2 => 'search',
+  3 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000441s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_caption` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_caption` WHERE `k_caption`.`delete_time` IS NULL [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `k_caption` WHERE `k_caption`.`delete_time` IS NULL [ RunTime:0.000223s ]
+---------------------------------------------------------------
+
+[2020-11-28T16:23:00+08:00] 203.208.60.38 GET 47.106.93.189/chapter_content/1561/136
+[运行时间：0.091217s] [吞吐率：10.96req/s] [内存消耗：20,885.24kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1561',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1561',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000364s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.051148s ]
+---------------------------------------------------------------
+
+[2020-11-28T16:31:20+08:00] 203.208.60.65 GET www.lilymin.com/chapter/145
+[运行时间：0.033773s] [吞吐率：29.61req/s] [内存消耗：3,779.18kb] [文件加载：85]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter/<id>',
+  'route' => 'index/Index/chapter',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'if-modified-since' => 'Fri, 27 Nov 2020 23:08:59 GMT',
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'www.lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/chapter.html [ array (
+  0 => 'novel_info',
+  1 => 'novel',
+  2 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000353s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `id` = 145 ) AND `k_novel`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC LIMIT 0,20 [ RunTime:0.000345s ]
+---------------------------------------------------------------
+
+[2020-11-28T16:47:30+08:00] 203.208.60.118 GET lilymin.com/chapter_content/3237/146
+[运行时间：0.148076s] [吞吐率：6.75req/s] [内存消耗：43,424.54kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3237',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3237',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000398s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.001676s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.090946s ]
+---------------------------------------------------------------
+
+[2020-11-28T17:42:26+08:00] 192.241.218.44 GET 47.106.93.189/
+[运行时间：0.032176s] [吞吐率：31.08req/s] [内存消耗：3,245.44kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 zgrab/0.x',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000341s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000195s ]
+---------------------------------------------------------------
+
+[2020-11-28T17:49:09+08:00] 60.183.123.181 GET www.lilymin.com/
+[运行时间：0.033324s] [吞吐率：30.01req/s] [内存消耗：3,246.22kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000349s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000222s ]
+---------------------------------------------------------------
+
+[2020-11-28T17:49:20+08:00] 218.26.169.230 GET www.lilymin.com/
+[运行时间：0.032401s] [吞吐率：30.86req/s] [内存消耗：3,246.22kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000384s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000211s ]
+---------------------------------------------------------------
+
+[2020-11-28T17:50:57+08:00] 89.248.171.97 GET 47.106.93.189/
+[运行时间：0.031485s] [吞吐率：31.76req/s] [内存消耗：3,245.81kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000221s ]
+---------------------------------------------------------------
+
+[2020-11-28T17:53:55+08:00] 219.136.205.26 GET www.lilymin.com/admin
+[运行时间：0.020120s] [吞吐率：49.70req/s] [内存消耗：1,904.28kb] [文件加载：67]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin',
+  'route' => 'admin/admin/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2020-11-28T17:53:55+08:00] 219.136.205.26 GET www.lilymin.com/login
+[运行时间：0.018796s] [吞吐率：53.20req/s] [内存消耗：1,812.91kb] [文件加载：64]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Base/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'referer' => 'https://www.lilymin.com/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/admin/view/admin/login.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-11-28T18:02:43+08:00] 203.208.60.43 GET 47.106.93.189/chapter_content/5645/136
+[运行时间：0.090691s] [吞吐率：11.03req/s] [内存消耗：20,885.24kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '5645',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5645',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000376s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.046100s ]
+---------------------------------------------------------------
+
+[2020-11-28T18:03:22+08:00] 203.208.60.78 GET lilymin.com/chapter_content/1422/136
+[运行时间：0.091774s] [吞吐率：10.90req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1422',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1422',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000346s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.046935s ]
+---------------------------------------------------------------
+
+[2020-11-28T18:03:55+08:00] 203.208.60.101 GET ebuycms.lilymin.com/template/default/mobile/skin/images/zixun.png
+[运行时间：0.016065s] [吞吐率：62.25req/s] [内存消耗：1,436.07kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T18:04:19+08:00] 192.241.235.20 GET 47.106.93.189/owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f
+[运行时间：0.014968s] [吞吐率：66.81req/s] [内存消耗：1,435.98kb] [文件加载：53]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+---------------------------------------------------------------
+
+[2020-11-28T18:25:20+08:00] 47.101.187.176 GET shop.lilymin.com/
+[运行时间：0.032789s] [吞吐率：30.50req/s] [内存消耗：3,245.69kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'shop.lilymin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000351s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000195s ]
+---------------------------------------------------------------
+
+[2020-11-28T18:53:50+08:00] 47.101.38.110 GET 47.106.93.189/
+[运行时间：0.033705s] [吞吐率：29.67req/s] [内存消耗：3,245.51kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '47.106.93.189',
+  'user-agent' => 'Mozilla/5.0 (Linux/Android/android/iphone;)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000393s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000255s ]
+---------------------------------------------------------------
+
+[2020-11-28T19:13:59+08:00] 3.90.140.70 GET www.lilymin.com/
+[运行时间：0.032514s] [吞吐率：30.76req/s] [内存消耗：3,246.09kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'host' => 'www.lilymin.com',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000380s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000235s ]
+---------------------------------------------------------------
+
+[2020-11-28T19:19:02+08:00] 203.208.60.105 GET lilymin.com/chapter_content/1643/136
+[运行时间：0.089477s] [吞吐率：11.18req/s] [内存消耗：20,885.88kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1643',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1643',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.046363s ]
+---------------------------------------------------------------
+
+[2020-11-28T19:28:43+08:00] 13.66.139.72 GET lilymin.com/
+[运行时间：0.032068s] [吞吐率：31.18req/s] [内存消耗：3,246.16kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+  'host' => 'lilymin.com',
+  'from' => 'bingbot(at)microsoft.com',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'pragma' => 'no-cache',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000210s ]
+---------------------------------------------------------------
+
+[2020-11-28T19:42:27+08:00] 203.208.60.65 GET 47.106.93.189/chapter_content/1854/138
+[运行时间：0.134183s] [吞吐率：7.45req/s] [内存消耗：38,567.09kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1854',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1854',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000345s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.076435s ]
+---------------------------------------------------------------
+
+[2020-11-28T20:03:36+08:00] 213.217.0.184 GET 47.106.93.189/
+[运行时间：0.032171s] [吞吐率：31.08req/s] [内存消耗：3,245.54kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'curl/7.54.0',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000370s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000207s ]
+---------------------------------------------------------------
+
+[2020-11-28T20:34:49+08:00] 203.208.60.84 GET lilymin.com/chapter_content/5596/137
+[运行时间：0.161436s] [吞吐率：6.19req/s] [内存消耗：46,490.43kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '5596',
+    'nid' => '137',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5596',
+  'nid' => '137',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000349s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 137 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.092730s ]
+---------------------------------------------------------------
+
+[2020-11-28T21:07:50+08:00] 47.101.187.176 GET 47.106.93.189/
+[运行时间：0.031076s] [吞吐率：32.18req/s] [内存消耗：3,245.70kb] [文件加载：84]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => '47.106.93.189',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/index.html [ array (
+  0 => 'title',
+  1 => 'novel',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000342s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `k_novel` WHERE (  `state` = 1 ) AND `k_novel`.`delete_time` IS NULL ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.000211s ]
+---------------------------------------------------------------
+
+[2020-11-28T21:22:09+08:00] 203.208.60.32 GET 47.106.93.189/chapter_content/1570/136
+[运行时间：0.086192s] [吞吐率：11.60req/s] [内存消耗：20,885.24kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '1570',
+    'nid' => '136',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1570',
+  'nid' => '136',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000354s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 136 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.045843s ]
+---------------------------------------------------------------
+
+[2020-11-28T21:53:30+08:00] 203.208.60.123 GET lilymin.com/chapter_content/3004/138
+[运行时间：0.141588s] [吞吐率：7.06req/s] [内存消耗：38,567.73kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3004',
+    'nid' => '138',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3004',
+  'nid' => '138',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000358s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 138 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.086185s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:01:52+08:00] 203.208.60.78 GET 47.106.93.189/chapter_content/3222/146
+[运行时间：0.147058s] [吞吐率：6.80req/s] [内存消耗：43,423.91kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3222',
+    'nid' => '146',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => '47.106.93.189',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3222',
+  'nid' => '146',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000343s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 146 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.084590s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:06:23+08:00] 203.208.60.82 GET lilymin.com/chapter_content/5009/145
+[运行时间：0.033168s] [吞吐率：30.15req/s] [内存消耗：5,206.12kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '5009',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,deflate,br',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'from' => 'googlebot(at)googlebot.com',
+  'accept' => 'text/html,application/xhtml+xml,application/signed-exchange;v=b3,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'amp-cache-transform' => 'google;v="1..5"',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5009',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.001315s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:32:26+08:00] 111.164.196.25 GET lilymin.com/chapter_content/4879/145
+[运行时间：0.035084s] [吞吐率：28.50req/s] [内存消耗：5,207.02kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4879',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lilymin.com',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://www.baidu.com/link?url=MPLJkZ1a1devZIk71fZhIDuZ4oKaJNFbpK-WwFOqQoY0sfYY9vuY9Vs5eyyXtb43cFWduaLADJ5s4K8GP-L6aK&wd=&eqid=cbbfe8290006cb36000000025fc26d70',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'cross-site',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4879',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.001060s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:32:38+08:00] 180.163.220.66 GET lilymin.com/chapter_content/4879/145
+[运行时间：0.034128s] [吞吐率：29.30req/s] [内存消耗：5,206.41kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4879',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lilymin.com',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://baidu.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 baidu.sogo.uc.UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4879',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000415s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.001014s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:34:31+08:00] 111.164.196.25 GET lilymin.com/chapter_content/4880/145?newurl=%2Fchapter_content%2F4880%2F145
+[运行时间：0.034377s] [吞吐率：29.09req/s] [内存消耗：5,184.99kb] [文件加载：80]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4880',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lilymin.com',
+  'cookie' => '__guid=81091082.1770369096779351300.1606577544023.4895; monitor_count=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://lilymin.com/chapter_content/4879/145',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'newurl' => '/chapter_content/4880/145',
+  'id' => '4880',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000396s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000992s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:34:31+08:00] 111.164.196.25 GET lilymin.com/chapter_content/4880/145?newurl=%2Fchapter_content%2F4880%2F145
+[运行时间：0.032736s] [吞吐率：30.55req/s] [内存消耗：5,184.99kb] [文件加载：80]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4880',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lilymin.com',
+  'cookie' => '__guid=81091082.1770369096779351300.1606577544023.4895; monitor_count=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://lilymin.com/chapter_content/4879/145',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'newurl' => '/chapter_content/4880/145',
+  'id' => '4880',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000400s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000975s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:36:16+08:00] 42.236.55.21 GET lilymin.com/chapter_content/4879/145
+[运行时间：0.032890s] [吞吐率：30.40req/s] [内存消耗：5,205.52kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4879',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36; 360Spider',
+  'connection' => 'Keep-Alive',
+  'accept-language' => 'zh-CN',
+  'accept' => '*/*',
+  'cookie' => '',
+  'referer' => 'https://lilymin.com/chapter_content/4879/145',
+  'accept-encoding' => 'deflate, gzip',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4879',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000324s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000967s ]
+---------------------------------------------------------------
+
+[2020-11-28T23:45:32+08:00] 185.191.171.2 GET lilymin.com/chapter_content/4896/145
+[运行时间：0.031765s] [吞吐率：31.48req/s] [内存消耗：5,205.29kb] [文件加载：81]
+[ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'chapter_content/<id>/<nid>',
+  'route' => 'index/Index/content',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4896',
+    'nid' => '145',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => 'text/html, application/rss+xml, application/atom+xml, text/xml, text/rss+xml, application/xhtml+xml',
+  'host' => 'lilymin.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4896',
+  'nid' => '145',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/www.lilymin.com/application/index/view/content.html [ array (
+  0 => 'nid',
+  1 => 'data',
+  2 => 'prev',
+  3 => 'next',
+  4 => 'title',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel_content` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT `id`,`content`,`title`,`novel_id` FROM `k_novel_content` WHERE (  `novel_id` = 145 ) AND `k_novel_content`.`delete_time` IS NULL ORDER BY `id` ASC [ RunTime:0.000956s ]

@@ -1,0 +1,113 @@
+{include file="public/_header" /}
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form">
+                  <div class="layui-form-item">
+                      <label for="song_name" class="layui-form-label">
+                          <span class="x-red">*</span>歌名
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="song_name" name="song_name" lay-verify="required" autocomplete="off" class="layui-input" {if(!empty($list['song_name']))}value="{$list['song_name']}"{/if}>
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="singer" class="layui-form-label">
+                          <span class="x-red">*</span>歌手
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="singer" name="singer" lay-verify="required" autocomplete="off" class="layui-input" {if(!empty($list['singer']))}value="{$list['singer']}"{/if}>
+                      </div>
+                  </div>
+				  <div class="layui-form-item">
+                      <label class="layui-form-label">
+                          <span class="x-red">*</span>mp4
+                      </label>
+                      <div class="layui-input-inline">
+                         <button type="button" class="layui-btn" id="uploads">
+						  <i class="layui-icon">&#xe67c;</i>上传mp4
+						</button>
+                      </div>
+                  </div>
+				  <div class="layui-form-item">
+                      <label for="state" class="layui-form-label">
+                          <span class="x-red">*</span>状态
+                      </label>
+                      <div class="layui-input-inline">
+                      <input type="radio" name="state" value="1" title="显示" {if(!empty($list) && $list['state']['state'] == 1 || empty($list))}checked{/if}>
+					  <input type="radio" name="state" value="0" title="隐藏" {if(!empty($list) && $list['state']['state'] == 0)}checked{/if}>
+                      </div>
+                  </div>
+				  <input type="hidden" name="url_id" value="{if(!empty($list['id']))}{$list['id']}{/if}">
+                  <div class="layui-form-item">
+                      <label for="L_repass" class="layui-form-label">
+                      </label>
+                      <button  class="layui-btn" lay-filter="add" lay-submit="" id="uploadsBegin">
+                          确认
+                      </button>
+                  </div>
+              </form>
+            </div>
+        </div>
+        <script>
+		layui.use(['form', 'layer','upload'], function() {
+		
+		var upload = layui.upload;
+		   
+		  //执行实例
+		  var uploadInst = upload.render({
+			elem: '#uploads' //绑定元素
+			,url: '' //上传接口
+			,method: 'post'
+			,accept: 'audio'
+			,field : 'music'
+			,auto: false
+			,bindAction: '#uploadsBegin'
+			,done: function(res){
+				console.log(res);
+			
+			}
+			,error: function(res){
+			  //请求异常回调
+			  console.log(res)
+			}
+		  });
+		
+                $ = layui.jquery;
+                var form = layui.form,
+                layer = layui.layer;
+                //监听提交
+                form.on('submit(add)',function(data) {
+					//弹出等待
+					$('#uploadsBegin').addClass("layui-btn-disabled");
+					$('#uploadsBegin').html("正在抓取。。。");
+                    //发异步，把数据提交给php
+					$.ajax({
+						type:"post",
+						url:'/get-novel-edit/doadd',
+						data:{data:data.field},
+						success:function(data){
+						  var data = JSON.parse(data);
+						  if(data.code == 1){
+							layer.msg(data.msg, {icon: 1});
+							var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+							setTimeout(function () {
+							  parent.layer.close(index);
+							  parent.location.reload();
+							},1000);
+						  }else{
+							$('#uploadsBegin').removeClass("layui-btn-disabled");
+							$('#uploadsBegin').html("重新获取");
+							layer.msg(data.msg, {icon: 2});
+						  }
+						}
+					});
+                    return false;
+                });
+
+            });
+			
+			</script>
+    </body>
+
+</html>
+{include file="public/_footer" /}

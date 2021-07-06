@@ -1,0 +1,10 @@
+[2021-04-08T00:00:01+08:00][ info ] [ LANG ] /www/wwwroot/www.lilymin.com/thinkphp/lang/zh-cn.php
+info
+[2021-04-08T00:00:01+08:00][ info ] [ DB ] INIT mysql
+info
+[2021-04-08T00:00:01+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.000510s ] mysql:host=127.0.0.1;dbname=bk;charset=utf8
+sql
+[2021-04-08T00:00:01+08:00][ sql ] [ SQL ] SHOW COLUMNS FROM `k_novel` [ RunTime:0.000714s ]
+sql
+[2021-04-08T00:00:01+08:00][ sql ] [ SQL ] SELECT `id`,`target_url`,`last_url`,`novel_state` FROM `k_novel` WHERE (  `novel_state` = 1 ) AND `k_novel`.`delete_time` IS NULL [ RunTime:0.000436s ]
+sql

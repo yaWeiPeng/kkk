@@ -1,0 +1,160 @@
+{include file="public/_header" type="edit" /}
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-show-xs-block">
+								APP_ID: 
+                                    <input class="layui-input"  autocomplete="off" placeholder="APP_ID" name="APP_ID" id="" value="{if(!empty($config))}{$config->APP_ID}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								API_KEY : 
+                                    <input class="layui-input"  autocomplete="off" placeholder="API_KEY" name="API_KEY" id="" value="{if(!empty($config))}{$config->API_KEY}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								SECRET_KEY: 
+                                    <input type="text" name="SECRET_KEY"  placeholder="SECRET_KEY" autocomplete="off" class="layui-input" value="{if(!empty($config))}{$config->SECRET_KEY}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								语速：<br><br>
+								<div id="spd"></div><br>
+                                </div>
+                                <div class="layui-show-xs-block">
+								音调：<br><br>
+								<div id="pit"></div><br>
+                                </div>
+                                <div class="layui-show-xs-block">
+								音量：<br><br>
+								<div id="vol"></div><br>
+                                </div>
+                                <div class="layui-show-xs-block">
+								发音：<br><br>
+								<div class="layui-input-inline">
+								  <input type="radio" name="per" value="0" title="女声" {if(empty($config->per) || $config->per == 0)}checked{/if}>
+								  <input type="radio" name="per" value="1" title="男声" {if(!empty($config->per) && $config->per == 1)}checked{/if}>
+								  <input type="radio" name="per" value="2" title="情感合成-度逍遥" {if(!empty($config->per) && $config->per == 2)}checked{/if}>
+								  <input type="radio" name="per" value="3" title="情感合成-度丫丫" {if(!empty($config->per) && $config->per == 3)}checked{/if}>
+								  </div>
+                                </div>
+                                <div class="layui-show-xs-block">
+								变量含义：<a href="https://ai.baidu.com/ai-doc/SPEECH/7k4nv3ngr" target="_blank">https://ai.baidu.com/ai-doc/SPEECH/7k4nv3ngr</a>
+                                </div>
+                                <div class="layui-show-xs-block">
+                                    <button class="layui-btn"  lay-submit="" lay-filter="add">保存</button>
+                                </div>
+								
+								
+								
+                            </form>
+							
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+					<div class="layui-show-xs-block">
+					测试: 
+						<input type="text" name="text" id="text" autocomplete="off" class="layui-input" value="百度语音合成">
+						<button class="layui-btn" onclick="tts()">合成</button>
+						
+			 <audio controls='controls' id="music"></audio>
+					</div>
+        </div> 
+	<script>
+	$ = layui.jquery;
+	function tts(){
+	var text = $('#text').val();
+		$.ajax({
+			type:"get",
+			url:'/speech',
+			data:{data:text},
+			success:function(data){
+			var data = JSON.parse(data);
+			  if(data.code == 1){
+				layer.msg(data.msg, {icon: 1});
+				$('#music').attr('src',data.data);
+			  }else{
+				layer.msg(data.msg, {icon: 2});
+			  }
+			}
+		});
+	}
+	
+	var spdValue;
+	var pitValue;
+	var volValue;
+	layui.use('slider', function(){
+  var slider = layui.slider;
+  
+  //渲染
+  var spd = slider.render({
+    elem: '#spd'  //绑定元素
+	,type: 'default'
+	,min: 0
+	,max: 9
+	,step: 1
+	,change: function(value){
+		spdValue = value;//动态获取滑块数值
+	  }
+  });
+  spd.setValue({if(!empty($config))}{$config->spd}{else}5{/if});
+  
+  var pit = slider.render({
+    elem: '#pit'  //绑定元素dd
+	,type: 'default'
+	,min: 0
+	,max: 9
+	,step: 1
+	,change: function(value){
+		pitValue = value;//动态获取滑块数值
+	  }
+  });
+  pit.setValue({if(!empty($config))}{$config->pit}{else}5{/if});
+  var vol = slider.render({
+    elem: '#vol'  //绑定元素
+	,type: 'default'
+	,min: 0
+	,max: 15
+	,step: 1
+	,change: function(value){
+		volValue = value;//动态获取滑块数值
+	  }
+  });
+  vol.setValue({if(!empty($config))}{$config->vol}{else}5{/if});
+});
+	
+	layui.use(['form', 'layer'],
+            function() {
+                $ = layui.jquery;
+                var form = layui.form,
+                layer = layui.layer;
+                //监听提交
+                form.on('submit(add)',function(data) {
+				data.field.spd = spdValue;
+				data.field.pit = pitValue;
+				data.field.vol = volValue;
+                    //发异步，把数据提交给php
+					$.ajax({
+						type:"post",
+						url:'/speech-config',
+						data:{data:data.field},
+						success:function(data){
+						  var data = JSON.parse(data);
+						  if(data.code == 1){
+							layer.msg(data.msg, {icon: 1});
+							setTimeout(function () {
+							  location.reload();
+							},2000);
+						  }else{
+							layer.msg(data.msg, {icon: 2});
+						  }
+						}
+					});
+                    return false;
+                });
+
+            });
+	</script>
+</html>

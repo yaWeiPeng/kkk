@@ -1,0 +1,79 @@
+<style>
+.imgbox{width:180px;height:180px;padding:10px;float:left;position: relative;border:1px double #ccc}
+.remove{cursor: pointer;width:24px;height:24px;font-size:16px;text-align:center;line-height:24px;background: #000;color:#fff;position: absolute;right:0;top:0}
+</style>
+<div class="layui-form-item">
+	{if([only_show_input]!=1)}
+	<label for="url" class="layui-form-label">
+		<span class="x-red">*</span>图片
+	</label>
+	{/if}
+	{if([pics]==1)}
+	<div class="layui-col-md4">
+		<input type="text" name="[name]" placeholder="图片路径" autocomplete="off" class="layui-input" value="[data]">
+		<div style="display:none;" id="[name]">
+			<!-- <img src="#" style="height:150px;width:100%"> -->
+		</div>
+	</div>
+	{/if}
+	<div class="layui-input-inline">
+		<button class="layui-btn" onclick="xadmin.open('图片管理器','/image-plugin?pics=[pics]')"><i class="layui-icon"></i>添加图片</button>
+	</div>
+</div>
+{if([pics]!=1)}
+<div class="layui-form-item" id="preview" style="display:none;">
+	<label class="layui-form-label">
+		图片预览
+	</label>
+	<div id="preview_pic">
+		<!-- <div class="imgbox">
+			<span class="remove">x</span>
+			<img src="#" height="100%" width="100%">
+		</div> -->
+	</div>
+</div>
+{/if}
+<script>
+var images = [];
+function image(image_arr){
+	if([pics]==1){
+		$('#[name]').css({'display':'block','text-align':'center','vertical-align':'middle'});
+		$('input[name=[name]]').val(image_arr[0]['path']).focus().blur();
+		$('#[name]').html("");
+		$('#[name]').append('<img src="'+image_arr[0]['path']+'" style="height:150px;max-width:100%">');
+		console.log(image_arr);
+	}else if([pics]==1){
+		$('#preview').css('display','block');
+		//$('#pic').value('image_arr');
+		//二维转一维
+		for(var i=0;i<image_arr.length;i++){
+			images.push(image_arr[i]);
+		}
+		console.log(images);
+		console.log([pics]);
+		$('#preview_pic').html("");
+		//循环显示
+		for(var i=0;i<images.length;i++){
+			$('#preview_pic').append('<div class="imgbox"><span class="remove">x</span><img src="'+images[i]['path']+'" height="60%" width="100%"><input type="text" class="layui-input" style="margin-top:6px" value="'+images[i]['sort']+'"><input type="text" class="layui-input" style="margin-top:6px" value="'+images[i]['path']+'"></div>');
+		}
+	}
+}
+
+//检测单图是否有值,有值显示图片
+OnePics();
+function OnePics(){
+	var data = '[data]';
+	if(data!=''){
+		$('#[name]').css({'display':'block','text-align':'center','vertical-align':'middle'});
+		$('#[name]').append('<img src="[data]" style="height:150px;max-width:100%">');
+	}
+}
+$('#preview_pic').on('click',".remove",function(){
+	var path = $(this).siblings("img").attr("src");
+	images.splice(jQuery.inArray($(this).siblings("img").attr("src"),images),1);
+	$(this).parent(".imgbox").remove();
+	if(images.length==0){
+		$('#preview').css('display','none');
+	}
+})	
+</script>

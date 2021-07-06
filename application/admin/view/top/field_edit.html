@@ -1,0 +1,120 @@
+{include file="public/_header" type="edit" /}
+<form class="layui-form">
+	<!-- <div class="layui-form-item">
+		<label for="table" class="layui-form-label">
+			<span class="x-red">*</span>表
+		</label>
+		<div class="layui-input-inline" style="width:260px">
+			<select name="table" lay-verify="required">
+				<option value="">选择表</option>
+				<option value="main">主表</option>
+				<option value="side">副表</option>
+			</select>
+		</div>
+	</div> -->
+	<div class="layui-form-item">
+		<label for="field" class="layui-form-label">
+			<span class="x-red">*</span>字段名
+		</label>
+		<div class="layui-input-inline">
+			<input type="text" name="field" {if(isset($field))}value="{$field['field']}" disabled{/if} autocomplete="off" class="layui-input" lay-verify="required">
+		</div>
+		<div class="layui-form-mid layui-word-aux">
+			<span class="x-red">*2-15位,可英文,可下划线,区分大小写</span>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="type" class="layui-form-label">
+			<span class="x-red">*</span>字段类型
+		</label>
+		<div class="layui-input-inline" style="width:260px">
+			<select name="type" lay-filter="type" lay-verify="required">
+				<option value="">选择类型</option>
+				<option value="varchar" {if(isset($field))}{if $field['type']['type']=='varchar'}selected{/if}{/if}>输入框</option>
+				<option value="radio" {if(isset($field))}{if $field['type']['type']=='radio'}selected{/if}{/if}>单选</option>
+				<option value="checkbox" {if(isset($field))}{if $field['type']['type']=='checkbox'}selected{/if}{/if}>多选</option>
+				<option value="img" {if(isset($field))}{if $field['type']['type']=='img'}selected{/if}{/if}>图片</option>
+				<option value="img" {if(isset($field))}{if $field['type']['type']=='join'}selected{/if}{/if}>关联</option>
+			</select>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="type_val" class="layui-form-label">
+			<span class="x-red">*</span>字段类型值
+		</label>
+		<div class="layui-input-inline" style="width:70%">
+			<input type="text" name="type_val" {if(isset($field))}value="{$field['type_val']}"{/if} autocomplete="off" class="layui-input" placeholder="单选多选输入格式:键:值,键:值 | 图片输入格式:1单图,0多图 | 关联表的名字,默认关联到id">
+		</div>
+	</div>
+	<!-- <div class="layui-form-item">
+        <label for="url" class="layui-form-label">
+            <span class="x-red">*</span>无符号
+        </label>
+        <div class="layui-input-block">
+            <input type="radio" name="unsigned" value="1" title="无符号">
+            <input type="radio" name="unsigned" value="0" title="有符号" checked>
+        </div>
+    </div> -->
+	<!-- <div class="layui-form-item">
+        <label for="url" class="layui-form-label">
+            <span class="x-red">*</span>是否为空
+        </label>
+        <div class="layui-input-block">
+            <input type="radio" name="null" value="1" title="不为空">
+            <input type="radio" name="null" value="0" title="为空" checked>
+        </div>
+    </div> -->
+	<div class="layui-form-item">
+		<label for="default_value" class="layui-form-label">
+			<span class="x-red">*</span>默认值
+		</label>
+		<div class="layui-input-inline" style="width:70%">
+			<input type="text" name="default_value" {if(isset($field))}value="{$field['default_value']}"{/if} autocomplete="off" class="layui-input" placeholder="单选多选默认选择哪个,就写键的值.输入框直接写,没有就不填">
+		</div>
+	</div>
+	{if(!isset($field))}
+	<div class="layui-form-item">
+		<label for="check" class="layui-form-label"><span class="x-red">*</span>检查是否存在</label>
+		<div class="layui-input-inline">
+			<input type="radio" name="check" value="1" title="是" checked>
+			<input type="radio" name="check" value="0" title="否">
+		</div>
+	</div>
+	{/if}
+	{caption:field caption="field" id='$field.id' /}
+	<!-- <div class="layui-form-item">
+        <label for="url" class="layui-form-label">
+            <span class="x-red">*</span>注释
+        </label>
+        <div class="layui-input-block">
+            <textarea name="body" placeholder="请输入内容"></textarea>
+        </div>
+    </div> -->
+	<input type="hidden" name="tableName" value="{$table['model']}">
+	<input type="hidden" name="caption_id" value="{$table['id']}">
+	<div class="layui-form-item">
+		<label for="L_repass" class="layui-form-label"></label>
+		{if(isset($field))}
+		<input type="hidden" name="id" value="{$field['id']}" />
+		<button  class="layui-btn" lay-filter="edit" lay-submit="" id="wait">修改</button>
+		{else}
+		<button  class="layui-btn" lay-filter="add" lay-submit="" id="wait">添加</button>
+		{/if}
+	</div>
+</form>
+<script>
+	layui.use(['form', 'layer'],function() {
+		var $ = layui.jquery,
+				form = layui.form;
+		form.on('submit(add)',function(data) {
+			editajax('post','/field/doedit',data.field);
+			return false;
+		});
+		form.on('submit(edit)',function(data) {
+			editajax('post','/field/doedit',data.field);
+			return false;
+		});
+	});
+
+</script>
+{include file="public/_footer" type="edit" /}

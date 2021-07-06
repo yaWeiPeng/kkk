@@ -1,0 +1,74 @@
+{include file="public/_header" /}
+<style>
+.layui-form-label{
+	text-align:left;
+	width:auto;
+}
+.layui-input{
+	border-style:none none solid none;
+}
+</style>
+<div class="layui-fluid">
+	<div class="layui-row layui-col-space15">
+		<div class="layui-col-md12">
+			<div class="layui-card">
+				<div class="layui-card-body ">
+				<div class="layui-form-item">
+					<div class="layui-col-md2 layui-form-label">
+						网站名字
+					</div>
+					<div class="layui-col-md10">
+						<input type="text" name="title" placeholder="网站名字" autocomplete="off" class="layui-input" value="<?=globSet('title');?>">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-col-md2 layui-form-label">
+						网站ico
+					</div>
+					<div class="layui-col-md10">
+						{include file="image/image_button" only_show_input="1" pics="1" name="ico" data="<?=globSet('ico')?>" /}
+						<!-- <input type="text" name="title" placeholder="网站ico" autocomplete="off" class="layui-input"> -->
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-col-md2 layui-form-label">
+						后台超时登录时间
+					</div>
+					<div class="layui-col-md10">
+						<input type="text" name="admin_logon_timeout" placeholder="后台超时登录时间" autocomplete="off" class="layui-input" value="<?=globSet('admin_logon_timeout');?>">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<button type="button" class="layui-btn layui-btn-warm" id="addSet">添加设置项</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+layui.use(['layer'],function() {
+	$ = layui.jquery;
+	layer = layui.layer;
+	$("input").blur(function(){
+		$.ajax({
+			type:"post",
+			url:'/set/edit',
+			data:{name:this.name,value:this.value},
+			success:function(data){
+				var data = JSON.parse(data);
+				if(data.code == 1){
+					layer.msg(data.msg, {icon: 1});
+				}else{
+					layer.msg(data.msg, {icon: 2});
+				}
+			}
+		});
+	});
+	
+	$('#addSet').click(function(){
+		console.log(1)
+	});
+});
+</script>
+{include file="public/_footer" /}

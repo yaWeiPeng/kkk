@@ -1,0 +1,68 @@
+{include file="public/_header" type="edit" /}
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+                                <div class="layui-show-xs-block">
+								Account Sid （开发者控制台首页）: 
+                                    <input class="layui-input"  autocomplete="off" placeholder="AccountSid" name="AccountSid" id="" value="{if(!empty($config))}{$config->AccountSid}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								Auth Token （开发者控制台首页）: 
+                                    <input class="layui-input"  autocomplete="off" placeholder="AuthToken" name="AuthToken" id="" value="{if(!empty($config))}{$config->AuthToken}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								appid （应用的ID，可在开发者控制台内的短信产品下查看）: 
+                                    <input type="text" name="appid"  placeholder="appid" autocomplete="off" class="layui-input" value="{if(!empty($config))}{$config->appid}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								templateid （模板ID）: 
+                                    <input type="text" name="templateid"  placeholder="templateid" autocomplete="off" class="layui-input" value="{if(!empty($config))}{$config->templateid}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+								param （验证码）: 
+                                    <input type="text" name="param"  placeholder="param" autocomplete="off" class="layui-input" value="{if(!empty($config))}{$config->param}{/if}">
+                                </div>
+                                <div class="layui-show-xs-block">
+                                    <button class="layui-btn"  lay-submit="" lay-filter="add">保存</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<script>
+	layui.use(['form', 'layer'],
+            function() {
+                $ = layui.jquery;
+                var form = layui.form,
+                layer = layui.layer;
+                //监听提交
+                form.on('submit(add)',function(data) {
+                    //发异步，把数据提交给php
+					$.ajax({
+						type:"post",
+						url:'/yzm-config',
+						data:{data:data.field},
+						success:function(data){
+						  var data = JSON.parse(data);
+						  if(data.code == 1){
+							layer.msg(data.msg, {icon: 1});
+							setTimeout(function () {
+							  location.reload();
+							},2000);
+						  }else{
+							layer.msg(data.msg, {icon: 2});
+						  }
+						}
+					});
+                    return false;
+                });
+
+            });
+	</script>
+</html>

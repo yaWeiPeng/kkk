@@ -1,0 +1,71 @@
+{include file="public/_header" /}
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form">
+                  <div class="layui-form-item">
+                      <label for="name" class="layui-form-label">
+                          <span class="x-red">*</span>类型
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="name" name="name" required="" autocomplete="off" class="layui-input" {if(!empty($list['name']))}value="{$list['name']}"{/if}>
+                      </div>
+                      <div class="layui-form-mid layui-word-aux">
+                          <span class="x-red">*</span>分类名字
+                      </div>
+                  </div>
+				  <div class="layui-form-item">
+                      <label for="state" class="layui-form-label">
+                          <span class="x-red">*</span>状态
+                      </label>
+                      <div class="layui-input-inline">
+                      <input type="radio" name="state" value="1" title="显示" {if(!empty($list) && $list['state']['state'] == 1 || empty($list))}checked{/if}>
+					  <input type="radio" name="state" value="0" title="隐藏" {if(!empty($list) && $list['state']['state'] == 0)}checked{/if}>
+                      </div>
+                  </div>
+				  {if(!empty($list))}
+					<input type="hidden" name="id" value="{$list['id']}">
+				  {/if}
+                  <div class="layui-form-item">
+                      <label for="L_repass" class="layui-form-label">
+                      </label>
+                      <button  class="layui-btn" lay-filter="add" lay-submit="">
+                          {if(!empty($list))}确认修改{else}增加{/if}
+                      </button>
+                  </div>
+              </form>
+            </div>
+        </div>
+        <script>
+		layui.use(['form', 'layer'],
+            function() {
+                $ = layui.jquery;
+                var form = layui.form,
+                layer = layui.layer;
+
+                //监听提交
+                form.on('submit(add)',function(data) {
+                    //发异步，把数据提交给php
+					$.ajax({
+						type:"post",
+						url:'/article-type-edit/doadd',
+						data:{data:data.field},
+						success:function(res){
+						  var dataJson = JSON.parse(res);
+						  if(dataJson.code == 1){
+							layer.msg(dataJson.msg, {icon: 1});
+							var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+							setTimeout(function () {
+							  parent.layer.close(index);
+							  parent.location.reload();
+							},1000);
+						  }else{
+							layer.msg(dataJson.msg, {icon: 2});
+						  }
+						}
+					});
+                    return false;
+                });
+
+            });
+			</script>
+{include file="public/_footer" /}

@@ -1,0 +1,39 @@
+{include file="public/_header" /}
+<div class="layui-fluid">
+	<div class="layui-row layui-col-space15">
+		<div class="layui-col-md12">
+			<div class="layui-card">
+				<div class="layui-card-body ">
+					<form class="layui-form layui-col-space5" action="/novel-edit/add" method="get">
+						<div class="layui-inline layui-show-xs-block">
+							<input type="text" name="url"  placeholder="请输入网站" autocomplete="off" class="layui-input" {if(!empty($get['url']))}value="{$get['url']}"{/if}>
+						</div>
+						<div class="layui-inline layui-show-xs-block">
+							<button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+						</div>
+					</form>
+				</div>
+				<div class="layui-card-header">
+					<button class="layui-btn" onclick="xadmin.open('添加文章','/article-type-edit/add')"><i class="layui-icon"></i>添加url</button>
+				</div>
+				<div class="layui-card-body layui-table-body layui-table-main">
+					<div class="layui-row">
+						{foreach $data as $v}
+						<div class="layui-form-item">
+							<label for="title" class="layui-form-label">
+								<span class="x-red">*</span>网站
+							</label>
+							<a href="{$v['url']}" target="_blank">{$v['url']}</a>
+							<div class="layui-card-header">
+								<button class="layui-btn" onclick="xadmin.open('拉取小说','/get-novel-edit/{$v['id']}')"><i class="layui-icon"></i>拉取</button>
+							</div>
+						</div>
+						{/foreach}
+					{$data|raw}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+{include file="public/_footer" /}

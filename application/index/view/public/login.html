@@ -1,0 +1,83 @@
+<style type="text/css">
+	.zh_box{position: fixed;right:100px;top: 100px;width:auto;}
+	.zh_box button{display:block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;}
+	.zh_box a{display:none;line-height: 32px;text-align: center;cursor: pointer;}
+	.zh_box:hover a{display: block;}
+</style>
+
+<div class="zh_box">
+{if(empty($user))}
+<button id="login">登陆账号</button>
+{else}
+<div class="user_box">
+<button>{$user['phone']}</button>
+<a href="javascript:void(0);" id="history">小说浏览记录</a>
+<a href="javascript:void(0);" id="collection">收藏记录</a>
+<a href="javascript:void(0);" id="exit">退出</a>
+</div>
+{/if}
+</div>
+<script>
+$('#login').click(function(){
+	layer.open({
+		type: 2, 
+		area: ['700px','400px'],
+		scrollbar: false,
+		resize: false,
+		title: '登录',
+		content: '/i-login'
+	});
+});
+
+$('#history').click(function(){
+	layer.open({
+		type: 2, 
+		area: ['700px','400px'],
+		scrollbar: false,
+		resize: false,
+		title: '浏览记录',
+		content: '/i-history'
+	});
+});
+
+$('#collection').click(function(){
+	layer.open({
+		type: 2, 
+		area: ['700px','400px'],
+		scrollbar: false,
+		resize: false,
+		title: '收藏记录',
+		content: '/i-collection'
+	});
+});
+
+$('#exit').click(function(){
+	$.ajax({
+		type:"post",
+		url:"/i-exit",
+		success:function(data){
+		var obj = eval('(' + data + ')');
+			if(obj.code==1){
+				layer.msg(obj.msg, {icon: 1});
+				setTimeout(function () {after();},1000);
+			}else{
+				layer.msg(obj.msg, {icon: 2});
+			}
+		}
+	});
+});
+function after(){
+	location.reload();
+}
+</script>

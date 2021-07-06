@@ -1,0 +1,22 @@
+<html>
+	{include file="public/header" /}
+	{include file="public/js" /}
+<body>
+<h1>浏览记录</h1>
+<div class="layui-container"> 
+{foreach $data as $v}
+  <div class="layui-row">
+    <div class="layui-col-xs4">
+      {$v['novel_title']}
+    </div>
+    <div class="layui-col-xs5">
+      <a href="/chapter_content/{$v['cid']}/{$v['nid']}" target="_blank">{$v['chapter_title']}</a>
+    </div>
+    <div class="layui-col-xs3">
+      {$v['update_time']}
+    </div>
+  </div>
+ {/foreach}
+</div>
+</body>
+</html>

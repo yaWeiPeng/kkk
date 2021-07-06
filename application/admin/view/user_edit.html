@@ -1,0 +1,58 @@
+{include file="public/_header" type="edit" /}
+<form class="layui-form">
+{caption:field caption="user" id='$data.id' /}
+	<div class="layui-form-item">
+		<label class="layui-form-label"><span class="x-red">*</span>角色</label>
+			<div class="layui-input-inline">
+				<select name="permissions_id">
+					<option value="{$v['id']}">选择</option>
+					{foreach $permissions as $v}
+					<option value="{$v['id']}" {if($data['permissions_id'] == $v['id'])}selected{/if}>{$v['name']}</option>
+					{/foreach}
+				</select>
+			</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="L_pass" class="layui-form-label"><span class="x-red">*</span>密码</label>
+		<div class="layui-input-inline">
+			<input type="password" id="L_pass" name="password" lay-verify="password" autocomplete="off" class="layui-input" placeholder="6到16个字符">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="L_repass" class="layui-form-label"><span class="x-red">*</span>确认密码</label>
+		<div class="layui-input-inline">
+			<input type="password" id="L_repass" name="repass" lay-verify="repass" autocomplete="off" class="layui-input" placeholder="重复密码">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label for="L_repass" class="layui-form-label"></label>
+		{if(isset($data))}
+		<input type="hidden" name="id" value="{$data['id']}" />
+		<button  class="layui-btn" lay-filter="edit" lay-submit="" id="wait">修改</button>
+		{else}
+		<button  class="layui-btn" lay-filter="add" lay-submit="" id="wait">添加</button>
+		{/if}
+	</div>
+</form>
+<script>
+layui.use(['form', 'layer'],function() {
+	var $ = layui.jquery,
+		form = layui.form,
+		layer = layui.layer;
+	//监听提交
+	form.on('submit(add)',function(data) {
+		$('#wait').addClass("layui-btn-disabled");
+		$('#wait').html("正在提交");
+		console.log(data.field);
+		editajax('post','/user/doedit',data.field);
+		return false;
+	});
+	form.on('submit(edit)',function(data) {
+		$('#wait').addClass("layui-btn-disabled");
+		$('#wait').html("正在提交");
+		editajax('post','/user/doedit',data.field);
+		return false;
+	});
+});
+</script>
+{include file="public/_footer" type="edit" /}
